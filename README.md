@@ -1,6 +1,3 @@
-# 2
-README 2
-
 # 리눅스 프로세스 관리 명령어 정리
 
 > **top · ps · jobs · kill** 명령어의 개념과 사용법을 정리한 문서입니다.  
@@ -156,18 +153,6 @@ top -b -n 7 > top_output.txt
 * `k` : 선택한 프로세스 종료(내부적으로 `kill` 사용)
 * `1` : CPU 코어별 사용률 표시 토글
 
-#### (4) 예시 화면 / 이미지 가이드
-
-* **캡처 위치**: `top` 실행 직후 전체 화면
-* **파일명 예시**: `images/top-example.png`
-* **README 삽입 예시**:
-
-```markdown
-![top 예시 화면 – CPU/메모리 및 프로세스 목록](images/top-example.png)
-```
-
-> 이미지는 직접 본인 환경에서 캡처한 것을 사용하는 것을 권장합니다.
-
 ---
 
 ### 2. ps – 프로세스 스냅샷 조회
@@ -208,16 +193,6 @@ ps aux --sort=-%mem | head -n 10
 # 특정 프로그램 검색
 ps aux | grep nginx
 ps -ef | grep python
-```
-
-#### (4) 예시 화면 / 이미지 가이드
-
-* **캡처 위치**: `ps aux` 실행 결과 전체 화면
-* **파일명 예시**: `images/ps-aux-example.png`
-* **README 삽입 예시**:
-
-```markdown
-![ps aux 예시 출력 – PID, CPU, 메모리 사용률](images/ps-aux-example.png)
 ```
 
 ---
@@ -266,16 +241,6 @@ bg %1   # 1번 job을 백그라운드에서 계속 실행
 kill %1 # 1번 job에 시그널 전송(실제 PID 대신 %번호 사용)
 ```
 
-#### (5) 예시 화면 / 이미지 가이드
-
-* **캡처 위치**: `sleep 100 &` 실행 후 `jobs` 결과가 보이는 화면
-* **파일명 예시**: `images/jobs-example.png`
-* **README 삽입 예시**:
-
-```markdown
-![jobs 예시 – Running / Stopped 작업 목록](images/jobs-example.png)
-```
-
 ---
 
 ### 4. kill – 프로세스에 시그널 전송(종료)
@@ -322,16 +287,6 @@ kill -9 -1
 
 # 프로세스 그룹 ID(PGID)가 1234인 그룹 전체에 SIGTERM
 kill -15 -1234
-```
-
-#### (5) 예시 화면 / 이미지 가이드
-
-* **캡처 위치**: `ps -ef`로 프로세스를 확인하고 `kill`로 종료한 뒤 다시 `ps` 했을 때 사라진 모습
-* **파일명 예시**: `images/kill-example.png`
-* **README 삽입 예시**:
-
-```markdown
-![kill 사용 예시 – ps로 PID 확인 후 종료](images/kill-example.png)
 ```
 
 ---
@@ -626,8 +581,6 @@ ps -o pid,ppid,stat,command -p PID
 | ---- | ---------- | --------------------------- |
 | v1.0 | 2025-11-30 | README 기본 구조 및 명령어 설명 최초 작성 |
 | v1.1 | 2025-11-30 | 자주 발생하는 문제 & 해결 방법 섹션 추가    |
-
-(실제 사용 시 수정할 때마다 행을 추가해서 관리하면 됩니다.)
 
 ---
 
