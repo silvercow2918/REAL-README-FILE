@@ -519,7 +519,7 @@ ps -o pid,ppid,stat,command -p PID
 
 ---
 
-## 심화 학습 및 참고 자료
+## 참고 자료
 
 ### 1) 공식 매뉴얼
 
